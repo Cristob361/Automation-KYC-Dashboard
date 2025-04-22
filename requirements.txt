@@ -1,0 +1,8 @@
+streamlit
+pytesseract
+pandas
+openpyxl
+python-dotenv
+Pillow
+imaplib2
+email-validator
