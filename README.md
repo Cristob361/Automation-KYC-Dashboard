@@ -57,12 +57,31 @@ An intelligent, modular identity verification system for the banking sector, bui
 ## 💡 Demo Use Case
 
 Use the provided fictional ID image (e.g., “McLovin.jpg”) and manually enter name, date of birth, and address. The system will validate OCR-extracted values vs input and log the result.
+# Requirements for Automation KYC Verification Dashboard
 
-## 📜 License
+streamlit==1.32.0         # For building the interactive dashboard
+pytesseract==0.3.10        # OCR engine wrapper for Python (uses Tesseract)
+Pillow==10.2.0             # Image processing library (used in OCR)
+pandas==2.2.0              # Data manipulation and CSV logging
+python-dotenv==1.0.1       # Loads email credentials from .env file
+openpyxl==3.1.2            # Required for Excel form reading
+You can install all dependencies using:
 
-This project is part of an academic submission under the MSc in AI for Business – National College of Ireland (2025). Not intended for commercial deployment.
+pip install -r requirements.txt
+re is a simple and secure .env.example file you can include in your GitHub repository. This helps others understand what environment variables are needed without exposing sensitive data:
 
+# .env.example – Sample environment variables for KYC email integration
+
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_app_specific_password
+IMAP_SERVER=imap.yourmailprovider.com
+SMTP_SERVER=smtp.yourmailprovider.com
+SMTP_PORT=587
+🔒 Important:
+
+Do not commit your actual .env file.
+
+Use this .env.example to document required variables.
 ## 👤 Author
 
 **Cristóbal Cáceres**
-MSc in Artificial Intelligence for Business
